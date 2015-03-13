@@ -28,6 +28,7 @@
 
 <br>
 
+<% # Calculating variables %>
 <% all_products = Product.all %>
 <% average_price = all_products.sum(:price) / all_products.count %>
 <% all_prices = Array.new %>
@@ -35,6 +36,7 @@
 <% maximum_price = all_prices.max %>
 <% total_quantity = all_products.sum(:stock_quantity) %>
 
+<% # Displaying summary information %>
 <table>
   <thead>
     <tr>
@@ -58,6 +60,7 @@
 
 <%= link_to 'New Product', new_product_path %>
 
+<% # A hundred chunky bacons! %>
 <ol>
   <% 100.times do %>
     <li>Chunky Bacon</li>
